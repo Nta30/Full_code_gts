@@ -18,9 +18,11 @@
             bangsaiphan[i][j]=(bangsaiphan[i+1][j-1]-bangsaiphan[i][j-1])/(x[i+j]-x[i]);
         }
     }
+    printf("Bang ti sai phan:\n");
 	for(i=0;i<n;i++){
+		printf("%.4f ",x[i]); 
  		for(j=0;j<n-i;j++){
- 		printf("%.2f ",bangsaiphan[i][j]);
+ 		printf("%.4f ",bangsaiphan[i][j]);
 	   }
 	 printf("\n");
    }
