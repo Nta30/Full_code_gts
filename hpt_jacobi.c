@@ -44,7 +44,11 @@
 		   	}
 			x1[i]/=a[i][i]; 
 	    }
-	    err=fabs(Chuanvocung(n,x1)-Chuanvocung(n,x0));
+	    float t[100];
+		for(i=0;i<n;i++){
+			t[i]=x1[i]-x0[i];
+		} 
+	    err=Chuanvocung(n,t);
 	    for(i=0;i<n;i++){
 	    	x0[i]=x1[i];
 		}
