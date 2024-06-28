@@ -18,9 +18,9 @@
 		printf("\n");
 	}
 	float total=y[n-1],t=1;
-	for(i=2;i>=0;i--){
-		t*=(x0-x[i+1]);
-		total+=bangsaiphan[i][n-i-1]*t;
+	for(i=1;i<n;i++){
+		t*=(x0-x[n-i]);
+		total+=bangsaiphan[n-i-1][i]*t;
 	}
 	printf("Ket qua noi suy tai %f la: %f",x0,total); 
  }
