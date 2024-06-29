@@ -19,7 +19,7 @@ voi x0=(0,0,0)
  	do{
  		x1=f1(x0,y0,z0);
  		y1=f2(x1,y0,z0);
- 		z1=f3(x0,y1,z0);
+ 		z1=f3(x1,y1,z0);
  		
  		e1=fabs(x1-x0);
  		e2=fabs(y1-y0);
