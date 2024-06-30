@@ -1,7 +1,13 @@
 #include<stdio.h>
- void Newton(int n, float x[], float y[],float x0){
+ void Nhap(int n, float a[]){
+ 	int i;
+ 	for(i=0;i<n;i++){
+ 		scanf("%f",&a[i]);
+	 }
+ }
+ void Newton_lui(int n, float x[], float y[],float x0){
  	int i,j;
- 	float bangsaiphan[4][4];
+ 	float bangsaiphan[100][100];
  	for(i=0;i<n;i++){
  		bangsaiphan[i][0]=y[i];
 	 }
@@ -25,11 +31,17 @@
 	printf("Ket qua noi suy tai %f la: %f",x0,total); 
  }
  int main(){
- 	int n=4;
- 	float x[4]={0, 0.3, 0.7, 1.0};
- 	float y[4]={2, 2.2599, 2.5238, 2.7183};
+ 	int n;
+ 	printf("Nhap vao so diem:");
+ 	scanf("%d",&n);
+ 	float x[n];
+ 	printf("Nhap vao cac moc gia tri x:\n");
+ 	Nhap(n,x);
+ 	float y[n];
+ 	printf("Nhap vao cac moc gia tri y:\n");
+ 	Nhap(n,y);
  	float x0;
  	printf("Nhap vao gia tri can noi suy:");
  	scanf("%f",&x0);
- 	Newton(n,x,y,x0);
+ 	Newton_lui(n,x,y,x0);
  } 
